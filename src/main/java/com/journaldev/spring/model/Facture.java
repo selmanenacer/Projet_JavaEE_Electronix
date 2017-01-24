@@ -10,20 +10,24 @@ import javax.persistence.OneToOne;
 public class Facture {
 	@Id
 	@GeneratedValue
-	Long id_facture;
+	private int id;
 	
 	@OneToOne(mappedBy="facture", cascade=CascadeType.ALL)
-	Commande commande;
+	private Commande commande;
 	
-	protected Facture(Commande commande) {
+	public Facture(){
+		super();
+	}
+	
+	public Facture(Commande commande) {
 		super();
 		this.commande = commande;
 	}
-	public Long getId_facture() {
-		return id_facture;
+	public int getId_facture() {
+		return id;
 	}
-	public void setId_facture(Long id_facture) {
-		this.id_facture = id_facture;
+	public void setId_facture(int id_facture) {
+		this.id = id_facture;
 	}
 	public Commande getCommande() {
 		return commande;

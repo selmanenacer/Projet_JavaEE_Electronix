@@ -12,23 +12,30 @@ import javax.persistence.OneToMany;
 public class Categorie {
 	@Id
 	@GeneratedValue
-	Long idCategorie;
-	String non;
-	String description;
+	private int id;
+	private String non;
+	private String description;
 	
 	@OneToMany(mappedBy="categorie")
-	Set<Produit> listProduit = new HashSet<Produit>();
-	protected Categorie( String non, String description, Set<Produit> listProduit) {
+	private Set<Produit> listProduit = new HashSet<Produit>();
+	
+	public Categorie() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Categorie( String non, String description, Set<Produit> listProduit) {
 		super();
 		this.non = non;
 		this.description = description;
 		this.listProduit = listProduit;
 	}
-	public Long getIdCategorie() {
-		return idCategorie;
+	public int getId() {
+		return id;
 	}
-	public void setIdCategorie(Long idCategorie) {
-		this.idCategorie = idCategorie;
+	
+	public void setId(int idCategorie) {
+		this.id = idCategorie;
 	}
 	public String getNon() {
 		return non;

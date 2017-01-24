@@ -10,23 +10,31 @@ import javax.persistence.ManyToOne;
 public class Produit {
 	@Id
 	@GeneratedValue
-	Long idProduit;
-	String libelle;
+	private int id;
+	
+	private String libelle;
+	
 	@ManyToOne 
 	@JoinColumn (name="idCategorie")
-	Categorie categorie;
-	int stock;
-	protected Produit(String libelle, Categorie categorie, int stock) {
+	private Categorie categorie;
+	
+	private int stock;
+	
+	public Produit(){
+		super();
+	}
+	
+	public Produit(String libelle, Categorie categorie, int stock) {
 		super();
 		this.libelle = libelle;
 		this.categorie = categorie;
 		this.stock = stock;
 	}
-	public Long getIdProduit() {
-		return idProduit;
+	public int getIdProduit() {
+		return id;
 	}
-	public void setIdProduit(Long idProduit) {
-		this.idProduit = idProduit;
+	public void setIdProduit(int idProduit) {
+		this.id = idProduit;
 	}
 	public String getLibelle() {
 		return libelle;

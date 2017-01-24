@@ -14,23 +14,29 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class Panier {
 	@Id
 	@GeneratedValue
-	Long idPanier;
+	private int id;
+	
 	@OneToOne
 	@PrimaryKeyJoinColumn
-	Client client;
+	private Client client;
+	
 	@OneToMany(mappedBy="panier")
 	Set<LigneCommande> ligneCommandes = new HashSet<LigneCommande>();
 	
-	protected Panier(Client client, Set<LigneCommande> ligneCommandes) {
+	public Panier(){
+		super();
+	}
+	
+	public Panier(Client client, Set<LigneCommande> ligneCommandes) {
 		super();
 		this.client = client;
 		this.ligneCommandes = ligneCommandes;
 	}
-	public Long getIdPanier() {
-		return idPanier;
+	public int getIdPanier() {
+		return id;
 	}
-	public void setIdPanier(Long idPanier) {
-		this.idPanier = idPanier;
+	public void setIdPanier(int idPanier) {
+		this.id = idPanier;
 	}
 	public Client getClient() {
 		return client;

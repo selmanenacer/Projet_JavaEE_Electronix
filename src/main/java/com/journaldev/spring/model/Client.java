@@ -14,23 +14,28 @@ import javax.persistence.OneToOne;
 public class Client {
 	@Id
 	@GeneratedValue
-	Long idClient ;
-	String nom;
-	String prenom;
-	String email;
-	String psw;
-	int tel;
+	private int id ;
+	private String nom;
+	private String prenom;
+	private String email;
+	private String psw;
+	private int tel;
 	
 	@OneToOne(mappedBy="client", cascade=CascadeType.ALL)
-	Panier panier;
+	private Panier panier;
 	
 	@OneToOne (cascade = CascadeType.ALL)
-	Adresse adresse;
+	private Adresse adresse;
 	
 	@OneToMany(mappedBy="client")
-	Set<Commande> commande = new HashSet<Commande>();
+	private Set<Commande> commande = new HashSet<Commande>();
 	
-	protected Client(String nom, String prenom, String email, String psw, int tel, Panier panier, Adresse adresse,
+	public Client() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Client(String nom, String prenom, String email, String psw, int tel, Panier panier, Adresse adresse,
 			Set<Commande> commande) {
 		super();
 		this.nom = nom;
@@ -43,12 +48,12 @@ public class Client {
 		this.commande = commande;
 	}
 
-	public Long getIdClient() {
-		return idClient;
+	public int getId() {
+		return id;
 	}
 
-	public void setIdClient(Long idClient) {
-		this.idClient = idClient;
+	public void setIdClient(int idClient) {
+		this.id = idClient;
 	}
 
 	public String getNom() {

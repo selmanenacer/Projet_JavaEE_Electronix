@@ -17,22 +17,26 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class Commande {
 	@Id
 	@GeneratedValue
-	Long idCommande;
-	Date dateCommande;
-	double montant;
+	private int id;
+	private Date dateCommande;
+	private double montant;
 	
 	@OneToMany(mappedBy="commande")
-	Set<LigneCommande> ligneCommandes = new HashSet<LigneCommande>();
+	private Set<LigneCommande> ligneCommandes = new HashSet<LigneCommande>();
 	
 	@ManyToOne 
 	@JoinColumn (name="idClient")
-	Client client;
+	private Client client;
 	
 	@OneToOne
 	@PrimaryKeyJoinColumn
-	Facture facture;
+	private Facture facture;
 	
-	protected Commande(Date dateCommande, double montant, Set<LigneCommande> ligneCommandes,
+	public Commande(){
+		super();
+	}
+	
+	public Commande(Date dateCommande, double montant, Set<LigneCommande> ligneCommandes,
 			Client client, Facture facture) {
 		super();
 		this.dateCommande = dateCommande;
@@ -41,11 +45,11 @@ public class Commande {
 		this.client = client;
 		this.facture = facture;
 	}
-	public Long getIdCommande() {
-		return idCommande;
+	public int getId() {
+		return id;
 	}
-	public void setIdCommande(Long idCommande) {
-		this.idCommande = idCommande;
+	public void setId(int idCommande) {
+		this.id = idCommande;
 	}
 	public Date getDateCommande() {
 		return dateCommande;

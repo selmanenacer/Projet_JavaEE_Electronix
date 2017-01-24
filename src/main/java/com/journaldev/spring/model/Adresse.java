@@ -8,17 +8,17 @@ import javax.persistence.Id;
 public class Adresse {
 	@Id
 	@GeneratedValue
-	int id;
-	String rue;
-	String ville;
-	int codePostal;
+	private int id;
+	private String rue;
+	private String ville;
+	private int codePostal;
 	
 	public Adresse() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	protected Adresse(String rue, String ville, int codePostal) {
+	public Adresse(String rue, String ville, int codePostal) {
 		super();
 		this.rue = rue;
 		this.ville = ville;

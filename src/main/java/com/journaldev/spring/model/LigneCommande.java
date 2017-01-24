@@ -12,19 +12,23 @@ import javax.persistence.OneToOne;
 public class LigneCommande {
 	@Id
 	@GeneratedValue
-	Long idLigneCommande;
-	int quantite;
-	double montant;
+	private int id;
+	private int quantite;
+	private double montant;
 	@OneToOne (cascade = CascadeType.ALL)
-	Produit produit;
+	private Produit produit;
 	@ManyToOne 
 	@JoinColumn (name="idPanier")
-	Panier panier;
+	private Panier panier;
 	@ManyToOne 
 	@JoinColumn (name="idCommande")
-	Commande commande;
+	private Commande commande;
 	
-	protected LigneCommande(int quantite, double montant, Produit produit, Panier panier, Commande commande) {
+	public LigneCommande(){
+		super();
+	}
+	
+	public LigneCommande(int quantite, double montant, Produit produit, Panier panier, Commande commande) {
 		super();
 		this.quantite = quantite;
 		this.montant = montant;
@@ -32,11 +36,11 @@ public class LigneCommande {
 		this.panier = panier;
 		this.commande = commande;
 	}
-	public Long getIdLigneCommande() {
-		return idLigneCommande;
+	public int getId() {
+		return id;
 	}
-	public void setIdLigneCommande(Long idLigneCommande) {
-		this.idLigneCommande = idLigneCommande;
+	public void setId(int idLigneCommande) {
+		this.id = idLigneCommande;
 	}
 	public int getQuantite() {
 		return quantite;
