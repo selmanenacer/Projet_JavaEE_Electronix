@@ -13,7 +13,7 @@ public class Categorie {
 	@Id
 	@GeneratedValue
 	private int id;
-	private String non;
+	private String nom;
 	private String description;
 	
 	@OneToMany(mappedBy="categorie")
@@ -24,9 +24,9 @@ public class Categorie {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Categorie( String non, String description, Set<Produit> listProduit) {
+	public Categorie( String nom, String description, Set<Produit> listProduit) {
 		super();
-		this.non = non;
+		this.nom = nom;
 		this.description = description;
 		this.listProduit = listProduit;
 	}
@@ -37,11 +37,11 @@ public class Categorie {
 	public void setId(int idCategorie) {
 		this.id = idCategorie;
 	}
-	public String getNon() {
-		return non;
+	public String getNom() {
+		return nom;
 	}
-	public void setNon(String non) {
-		this.non = non;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	public String getDescription() {
 		return description;
