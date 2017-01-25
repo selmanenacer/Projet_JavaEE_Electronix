@@ -47,7 +47,7 @@ public class Client {
 		this.adresse = adresse;
 		this.commande = commande;
 	}
-
+ 
 	public int getId() {
 		return id;
 	}
