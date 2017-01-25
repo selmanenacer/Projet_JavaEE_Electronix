@@ -29,7 +29,7 @@ public class ClientController {
 		model.addAttribute("client", new Client());
 		model.addAttribute("listClients", this.clientService.findAll());
 		return "client";
-	} 
+	}  
 	
 	//For add and update person both
 	@RequestMapping(value= "/client/add", method = RequestMethod.POST)
