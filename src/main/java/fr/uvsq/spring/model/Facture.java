@@ -1,4 +1,4 @@
-package fr.uvsq.spring.model;
+ package fr.uvsq.spring.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

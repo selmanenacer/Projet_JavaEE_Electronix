@@ -1,6 +1,6 @@
 package fr.uvsq.spring.model;
 
-import java.util.HashSet;
+import  java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;

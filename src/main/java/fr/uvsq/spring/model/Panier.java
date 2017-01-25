@@ -1,4 +1,4 @@
-package fr.uvsq.spring.model;
+ package fr.uvsq.spring.model;
 
 import java.util.HashSet;
 import java.util.Set;
