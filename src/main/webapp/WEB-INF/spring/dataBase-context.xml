@@ -27,15 +27,15 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>com.journaldev.spring.model.Person</beans:value>
-				<beans:value>com.journaldev.spring.model.Adresse</beans:value>
-				<beans:value>com.journaldev.spring.model.Categorie</beans:value>
-				<beans:value>com.journaldev.spring.model.Client</beans:value>
-				<beans:value>com.journaldev.spring.model.Commande</beans:value>
-				<beans:value>com.journaldev.spring.model.Facture</beans:value>
-				<beans:value>com.journaldev.spring.model.LigneCommande</beans:value>
-				<beans:value>com.journaldev.spring.model.Panier</beans:value>
-				<beans:value>com.journaldev.spring.model.Produit</beans:value>
+				<beans:value>fr.uvsq.spring.model.Person</beans:value>
+				<beans:value>fr.uvsq.spring.model.Adresse</beans:value>
+				<beans:value>fr.uvsq.spring.model.Categorie</beans:value>
+				<beans:value>fr.uvsq.spring.model.Client</beans:value>
+				<beans:value>fr.uvsq.spring.model.Commande</beans:value>
+				<beans:value>fr.uvsq.spring.model.Facture</beans:value>
+				<beans:value>fr.uvsq.spring.model.LigneCommande</beans:value>
+				<beans:value>fr.uvsq.spring.model.Panier</beans:value>
+				<beans:value>fr.uvsq.spring.model.Produit</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">

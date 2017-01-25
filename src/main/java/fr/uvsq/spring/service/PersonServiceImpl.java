@@ -1,12 +1,12 @@
-package com.journaldev.spring.service;
+package fr.uvsq.spring.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.journaldev.spring.dao.PersonDAO;
-import com.journaldev.spring.model.Person;
+import fr.uvsq.spring.dao.PersonDAO;
+import fr.uvsq.spring.model.Person;
 
 @Service
 public class PersonServiceImpl implements PersonService {

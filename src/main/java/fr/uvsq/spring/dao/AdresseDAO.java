@@ -1,7 +1,8 @@
-package com.journaldev.spring.dao;
+package fr.uvsq.spring.dao;
 
 import java.util.List;
-import com.journaldev.spring.model.Adresse;
+
+import fr.uvsq.spring.model.Adresse;
 
 public interface AdresseDAO {
 	

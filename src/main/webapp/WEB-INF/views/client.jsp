@@ -21,7 +21,7 @@
 
 <form:form action="${addAction}" commandName="client">
 <table>
-	<c:if test="${!empty client.id}">
+	<c:if test="${!empty client.nom}">
 	<tr>
 		<td>
 			<form:label path="id">
@@ -37,7 +37,7 @@
 	<tr>
 		<td>
 			<form:label path="nom">
-				<spring:message text="prenom"/>
+				<spring:message text="nom"/>
 			</form:label>
 		</td>
 		<td>
@@ -65,12 +65,42 @@
 		</td> 
 	</tr>
 	<tr>
+		<td>
+			<form:label path="adresse.rue">
+				<spring:message text="rue"/>
+			</form:label>
+		</td>
+		<td>
+			<form:input path="adresse.rue" />
+		</td> 
+	</tr>
+	<tr>
+		<td>
+			<form:label path="adresse.ville">
+				<spring:message text="ville"/>
+			</form:label>
+		</td>
+		<td>
+			<form:input path="adresse.ville" />
+		</td> 
+	</tr>
+	<tr>
+		<td>
+			<form:label path="adresse.codePostal">
+				<spring:message text="code Postal"/>
+			</form:label>
+		</td>
+		<td>
+			<form:input path="adresse.codePostal" />
+		</td> 
+	</tr>
+	<tr>
 		<td colspan="2">
-			<c:if test="${!empty client.id}">
+			<c:if test="${!empty client.nom}">
 				<input type="submit"
 					value="<spring:message text="Edit client"/>" />
 			</c:if>
-			<c:if test="${empty client.id}">
+			<c:if test="${empty client.nom}">
 				<input type="submit"
 					value="<spring:message text="Add client"/>" />
 			</c:if>
@@ -83,10 +113,13 @@
 <c:if test="${!empty listClients}">
 	<table class="tg">
 	<tr>
-		<th width="80">client ID</th>
-		<th width="120">client Rue</th>
-		<th width="120">client Ville</th>
-		<th width="120">client ZIP</th>
+		<th width="80">ID</th>
+		<th width="120">nom</th>
+		<th width="120">prenom</th>
+		<th width="120">email</th>
+		<th width="120">Rue</th>
+		<th width="120">Ville</th>
+		<th width="120">code postal</th>
 		<th width="60">Edit</th>
 		<th width="60">Delete</th>
 	</tr>
@@ -96,9 +129,9 @@
 			<td>${client.nom}</td>
 			<td>${client.prenom}</td>
 			<td>${client.email}</td>
-			<td>${client.rue}</td>
-			<td>${client.ville}</td>
-			<td>${client.codePostal}</td>
+			<td>${client.adresse.rue}</td>
+			<td>${client.adresse.ville}</td>
+			<td>${client.adresse.codePostal}</td>
 			<td><a href="<c:url value='/editClient/${client.id}' />" >Edit</a></td>
 			<td><a href="<c:url value='/removeClient/${client.id}' />" >Delete</a></td>
 		</tr>

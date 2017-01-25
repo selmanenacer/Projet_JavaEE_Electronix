@@ -1,4 +1,4 @@
-package com.journaldev.spring;
+package fr.uvsq.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.journaldev.spring.model.Adresse;
-import com.journaldev.spring.model.Person;
-import com.journaldev.spring.service.AdresseService;
-import com.journaldev.spring.service.PersonService;
+import fr.uvsq.spring.model.Adresse;
+import fr.uvsq.spring.model.Person;
+import fr.uvsq.spring.service.AdresseService;
+import fr.uvsq.spring.service.PersonService;
 
 @Controller
 public class AdresseController {

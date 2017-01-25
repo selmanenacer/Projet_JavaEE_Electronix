@@ -1,8 +1,8 @@
-package com.journaldev.spring.service;
+package fr.uvsq.spring.service;
 
 import java.util.List;
 
-import com.journaldev.spring.model.Adresse;
+import fr.uvsq.spring.model.Adresse;
 
 public interface AdresseService {
 	

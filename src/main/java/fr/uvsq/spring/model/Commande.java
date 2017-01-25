@@ -1,4 +1,4 @@
-package com.journaldev.spring.model;
+package fr.uvsq.spring.model;
 
 import java.util.Date;
 import java.util.HashSet;

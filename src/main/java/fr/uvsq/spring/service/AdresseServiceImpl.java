@@ -1,11 +1,11 @@
-package com.journaldev.spring.service;
+package fr.uvsq.spring.service;
 
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.journaldev.spring.dao.AdresseDAO;
-import com.journaldev.spring.model.Adresse;
+import fr.uvsq.spring.dao.AdresseDAO;
+import fr.uvsq.spring.model.Adresse;
 
 public class AdresseServiceImpl implements AdresseService{
 	

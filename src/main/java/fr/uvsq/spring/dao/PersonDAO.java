@@ -1,8 +1,8 @@
-package com.journaldev.spring.dao;
+package fr.uvsq.spring.dao;
 
 import java.util.List;
 
-import com.journaldev.spring.model.Person;
+import fr.uvsq.spring.model.Person;
 
 public interface PersonDAO {
 
