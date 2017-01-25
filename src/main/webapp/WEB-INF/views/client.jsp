@@ -121,7 +121,7 @@
 		<th width="120">Ville</th>
 		<th width="120">code postal</th>
 		<th width="60">Edit</th>
-		<th width="60">Delete</th>   
+		<th width="60">Delete</th>    
 	</tr>
 	<c:forEach items="${listClients}" var="client">
 		<tr>
