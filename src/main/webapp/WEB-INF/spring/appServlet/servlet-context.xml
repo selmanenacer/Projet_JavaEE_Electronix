@@ -9,6 +9,9 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing 
 		infrastructure -->
+		
+		
+		
 
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
@@ -34,11 +37,15 @@
 	<!-- ************************************************************ -->
 	<!-- ********************* Les Beans DAO************************* -->
 	<!-- ************************************************************ -->
-	<beans:bean id="personDAO" class="com.journaldev.spring.dao.PersonDAOImpl">
+	<beans:bean id="personDAO" class="fr.uvsq.spring.dao.PersonDAOImpl">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 	
-	<beans:bean id="adresseDAO" class="com.journaldev.spring.dao.AdresseDAOImpl">
+	<beans:bean id="adresseDAO" class="fr.uvsq.spring.dao.AdresseDAOImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	
+	<beans:bean id="clientDAO" class="fr.uvsq.spring.dao.ClientDAOImpl">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 	
@@ -47,18 +54,22 @@
 	<!-- ********************* Les Beans Services******************** -->
 	<!-- ************************************************************ -->
 	
-	<beans:bean id="personService" class="com.journaldev.spring.service.PersonServiceImpl">
+	<beans:bean id="personService" class="fr.uvsq.spring.service.PersonServiceImpl">
 		<beans:property name="personDAO" ref="personDAO"></beans:property>
 	</beans:bean>
 	
-	<beans:bean id="adresseService" class="com.journaldev.spring.service.AdresseServiceImpl">
+	<beans:bean id="adresseService" class="fr.uvsq.spring.service.AdresseServiceImpl">
 		<beans:property name="adresseDAO" ref="adresseDAO"></beans:property>
+	</beans:bean>
+	
+	<beans:bean id="clientService" class="fr.uvsq.spring.service.ClientServiceImpl">
+		<beans:property name="clientDAO" ref="clientDAO"></beans:property>
 	</beans:bean>
 	
 	
 	<!-- ************************************************************ -->
 	<!-- ********************* Les Beans par défaut****************** -->
 	<!-- ************************************************************ -->
-	<context:component-scan base-package="com.journaldev.spring" />
+	<context:component-scan base-package="fr.uvsq.spring" />
 	
 </beans:beans>
