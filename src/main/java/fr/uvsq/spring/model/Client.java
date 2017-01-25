@@ -52,7 +52,7 @@ public class Client {
 		return id;
 	}
 
-	public void setIdClient(int idClient) {
+	public void setId(int idClient) {
 		this.id = idClient;
 	}
 

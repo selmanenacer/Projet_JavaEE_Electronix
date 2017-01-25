@@ -34,7 +34,7 @@ public class ClientController {
 	//For add and update person both
 	@RequestMapping(value= "/client/add", method = RequestMethod.POST)
 	public String insert(@ModelAttribute("client") Client p){
-		System.out.println("sdvds     ..........."+p.getId());
+		
 		if(p.getId() == 0){
 			//new person, add it
 			this.clientService.insert(p);
